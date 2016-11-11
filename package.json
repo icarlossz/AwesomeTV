@@ -1,0 +1,38 @@
+{
+  "name": "awesometv",
+  "version": "0.1.0",
+  "description": "web app for see information of movies with the tvmaze api",
+  "main": "index.js",
+  "scripts": {
+    "public": "mkdir public",
+    "build-js": "browserify -t [babelify --presets [ es2015 ] ] src/index.js > public/app.js",
+    "copy-files": "cp src/index.css public/app.css && cp src/index.html public/index.html",
+    "build": "npm run public && npm run build-js && npm run copy-files",
+    "serve": "serve public"
+  },
+  "keywords": [
+    "webapp",
+    "js",
+    "javascript"
+  ],
+  "author": "@iCarlosSz",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "page": "^1.7.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.18.0",
+    "babelify": "^7.3.0",
+    "browserify": "^13.1.1",
+    "serve": "^1.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:icarlossz/AwesomeTV.git"
+  },
+  "bugs": {
+    "url": "https://github.com/icarlossz/AwesomeTV/issues"
+  },
+  "homepage": "https://github.com/icarlossz/AwesomeTV#readme"
+}
